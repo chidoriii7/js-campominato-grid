@@ -13,12 +13,14 @@ function startGame() {
     } else if (difficultyPlay === 'difficile') {
         //difficile = 49 caselle (7x7)
       numCells = 49
+
     }
-  
+    
+    const containerCells = document.querySelector(".container");
+    containerCells.innerHTML = ''
     //una volta cliccato il bottone play spawna la griglia del gioco
     for (let i = 0; i < numCells; i++) {
       // seleziono il container dove creare i div
-      const containerCells = document.querySelector(".container");
   
       // creo i div
       const cell = document.createElement("div");
